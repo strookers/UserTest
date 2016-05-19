@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@{
+    if (Request.Cookies["User"] != null)
+    {
+        string name = Request.Cookies["User"]["name"];
+        string email = Request.Cookies["User"]["email"];
+
+        <h2>du er logget ind som: @name med email: @email</h2>
+    }
+}
+<p>Use this area to provide additional information.</p>
